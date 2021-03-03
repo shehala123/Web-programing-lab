@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Event Handling</title>
+</head>
+<body>
+<h1 align="center">Backgrounds color changes on click</h1>
+<div style="text-align:center">
+<button type="button" onclick="bgclr()">Click to change color</button> </div>
+<script>
+var i=0;
+  function bgclr()
+   {
+   var clrlist=["red","green","blue","orange", "indigo"];
+   document.body.style.backgroundColor=clrlist[i];
+  i++;
+}
+</script> 
+</body>
+</html>
