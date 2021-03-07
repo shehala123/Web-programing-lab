@@ -1,0 +1,26 @@
+<html lang="en">
+<head> 
+    
+    <title>Change background color on Click</title>
+</head>
+<body id="container">
+    <center><button id="button">Click me to change the Background color!</button>
+</center>
+    <script>
+var colors = ['blue', 'yellow', 'black', 'red', 'brown', 'orange'];
+
+//get button
+var button = document.getElementById('button');
+
+//add event listener
+button.addEventListener('click', function(){
+    //randomizer
+    var randomColor = colors[Math.floor(Math.random() * colors.length)]
+    //get container
+    var container = document.getElementById('container').style.background = randomColor;;
+
+    
+})
+</script>
+</body>
+</html>

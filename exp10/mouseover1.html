@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>onmouse event</title>
+</head>
+<body>
+<h1 id="heading">Heading</h1>
+<img id="image" onmouseover="fun1()" onmouseout="fun2()" src="car.jpg" width="500px" hight="500px">
+<script>
+function fun1(){ document.getElementById("image").src="car.jpg";
+document.getElementById ("heading").innerHTML="Heading 1";
+}
+function fun2(){
+document.getElementById("image").src="bus.jpg";
+document.getElementById ("heading").innerHTML="Heading 2"; 
+} 
+</script> 
+</body>
+</html>

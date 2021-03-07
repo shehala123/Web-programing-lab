@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>Form</title>
+<style>
+h1{
+font-color: red;font-size: 40px;
+}
+</style>
+<script>
+function validateForm() {
+     var password=document.forms["myForm"]["password"].value;
+     var name=document.forms["myForm"]["name1"].value;
+     var email=document.forms["myForm"]["email1"].value;
+     var dob=document.forms["myForm"]["dob"].value;
+     var alphadigit=0;
+     var alpha=/[a-zA-Z]/;
+     var digit=/[0-9]/ ;
+     if (name == "") {
+        window.alert("Name must be filled out");
+        return false;
+     }
+     if(name.match(alpha))
+     {
+       true;
+     }
+     else{
+         alert("Name should only contain characters");
+         return false;
+     }
+     
+     if ( email == "") {
+        window.alert("Email must be filled out");
+        return false;
+     }
+     if (dob == "") {
+        window.alert("DOB must be filled out");
+        return false;
+     }
+     if ( ( document.myForm.gender[0].checked == false ) && ( document.myForm.gender[1].checked == false ) )
+     {
+        alert ( "Please choose your Gender: Male or Female" );
+        return false;
+     }
+    if(document.getElementById("Hindi").checked)
+    {
+       valid=true;
+    } 
+    else if(document.getElementById("English").checked)
+    {
+       valid=true
+    } 
+    else if(document.getElementById("Malayalam").checked)
+    {
+         valid=true;
+    } 
+    else if(document.getElementById("Other").checked)
+    {
+        valid=true;
+    }
+    else
+    { 
+          window.alert("Please select atleast one language.");
+          return false;
+    } 
+    if(document.myForm.country.selectedIndex == 0)
+    {
+        alert ( "Please select your Country." );
+        return false;
+    }
+    if(document.forms["myForm"]["mobile"].value==""){
+        window.alert("Mobile number must be filled out");
+        return false;
+    }
+    if(password=="" || password.length<8)
+    {
+        window.alert("Passord must be filled out and must contain atleast 8 characters");
+        return false;
+    }
+    if(password.match(alpha)&&password.match(digit))
+    {
+        alphadigit=1;
+    }
+    if(alphadigit==0)
+    {
+        window.alert("Please enter password having atleast one digit and alphabets");
+        return false;
+    }
+return true;
+}
+</script>
+</head>
+<body bgcolor=pink>
+<h1 style="color:tomato;">APPLICATION FORM</h1>
+<form name="myForm" action=" " onsubmit="return validateForm()" method="get">
+<table>
+<tr>
+<th>Name:</th>
+<th><input type="text" name="name1" ></th>
+</tr>
+<tr>
+<tr>
+<th>Email:</th>
+<th><input type="email" name="email1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></th>
+</tr>
+<th>DOB:</th>
+<th><input type="text" name="dob"></th>
+</tr>
+
+<tr>
+<th>Gender:</th>
+<th><input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">Female</th>
+</tr>
+<tr>
+<th>Language<br>Known:</th>
+<th><input type="checkbox" id="Hindi" value="Hindi">Hindi
+<input type="checkbox" id="English" value="English">English
+<input type="checkbox" id="Malayalam" value="Malayalam">Malayalam
+<input type="checkbox" id="Other" value="Other">Other</th>
+</tr>
+<tr>
+<th>Country:</th>
+<th><select name="country">
+<option value="select" >Select </option>
+<option value="China">China</option>
+<option value="India">India</option>
+<option value="America">America</option>
+<option value="Africa">Africa</option>
+<opion value="Other">Other</option></select></th>
+</tr>
+<tr>
+<th>Mobile No.:</th>
+<th><input type="number" name="mobile" value="mobile"></th>
+</tr>
+<tr>
+<th>Password:</th>
+<th><input type="password" name="password" id="password"></th>
+</tr>
+<tr>
+<th colspan=2><input type="submit" value="submit" name="Submit"></th>
+</tr>
+</table>
+</form>
+</body>
+</html>

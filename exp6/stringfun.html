@@ -1,0 +1,40 @@
+<html>
+<body>
+<center><h1>String Function</h1></center>
+Eg:str="Have a nice day."
+<br>Length of the string=<div id="s0"> </div>
+String function using indexOf() to find the letter 'a'.
+<br>Eg:<div id="s1"></div>
+String function using lastIndexOf() to find the letter 'a'.
+<br>Eg:<div id="s2"></div>
+String function using slice(start,end).It also accepts negative value.
+<br>Eg:<div id="s3"></div>
+String function using substring(start,end).It doesn't accept negative value.
+<br>Eg:<div id="s4"></div>
+String function using substr(start,length).
+<br>Eg:<div id="s5"></div>
+String function using replace().
+<br>Eg:<div id="s6"></div>
+String function using toUpperCase().
+<br>Eg:<div id="s7"></div>
+String function using toLowerCase().
+<br>Eg:<div id="s8"></div>
+Click on the button for trim().<button onclick="myFunction()">Click me</button>
+<script>
+var str="Have a nice day."
+document.getElementById("s0").innerHTML=str.length;
+document.getElementById("s1").innerHTML=str.indexOf('a');
+document.getElementById("s2").innerHTML=str.lastIndexOf('a');
+document.getElementById("s3").innerHTML=str.slice(7,11);
+document.getElementById("s4").innerHTML=str.substring(0,5);
+document.getElementById("s5").innerHTML=str.substr(12,3);
+document.getElementById("s6").innerHTML=str.replace("nice","good");
+document.getElementById("s7").innerHTML=str.toUpperCase();
+document.getElementById("s8").innerHTML=str.toLowerCase();
+function myFunction(){
+alert(str.trim());
+}
+</script>
+</body>
+</html>
+

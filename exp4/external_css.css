@@ -1,0 +1,13 @@
+h2{
+color:Blue;font-size:50px;
+}
+hr{
+border-top: 1px dashed red;
+}
+p{
+font-family: Arial;
+}
+a{
+font-style:italic;
+font-size:30px;
+}

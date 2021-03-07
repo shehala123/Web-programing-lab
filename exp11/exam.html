@@ -1,0 +1,55 @@
+<html>
+<body bgcolor="lightblue">
+<form name="quiz">
+<h1>Sample Exam </h1>
+<div><p>1.Choose the correct HTML element for the largest heading:</p>
+<p><input type="radio" name="q1" value="heading">A.&lt;heading&gt;</p>
+<p><input type="radio" name="q1" value="h6">B.&lt;h6&gt;</p>
+<p><input type="radio" name="q1" value="h1">C.&lt;h1&gt;</p>
+<p><input type="radio" name="q1" value="head">D.&lt;head&gt;</p>
+</div>
+<div><p>2.What is the correct HTML element for inserting a line break?</p>
+<p><input type="radio" name="q2" value="break">A.&lt;break&gt;</p>
+<p><input type="radio" name="q2" value="lb">B.&lt;lb&gt;</p>
+<p><input type="radio" name="q2" value="br">C.&lt;br&gt;</p>
+<p><input type="radio" name="q2" value="hr">D.&lt;hr&gt;</p>
+</div>
+<div><p>3.Which character is used to indicate an end tag?</p>
+<p><input type="radio" name="q3" value="^">A.^</p>
+<p><input type="radio" name="q3" value="*">B.*</p>
+<p><input type="radio" name="q3" value="\">C.\</p>
+<p><input type="radio" name="q3" value="/">D./</p>
+</div>
+<div><p>4.HTML stands for :</p>
+<p><input type="radio" name="q4" value="t1">A.Hypertext Markup Language</p>
+<p><input type="radio" name="q4" value="t2">B.Hypotext Markup Language</p>
+<p><input type="radio" name="q4" value="t3">C.Hypertext Makeup Language</p>
+<p><input type="radio" name="q4" value="t4">D.None of the above</p>
+</div>
+<div><p>5.How can you make a numbered list?</p>
+<p><input type="radio" name="q5" value="ol">A.&lt;ol&gt;</p>
+<p><input type="radio" name="q5" value="ul">B.&lt;ul&gt;</p>
+<p><input type="radio" name="q5" value="dl">C.&lt;dl&gt;</p>
+<p><input type="radio" name="q5" value="list">D.&lt;list&gt;</p>
+</div>
+<input type="Button" name="Submit" value="Submit" onclick="check()">
+</form>
+<script>
+function check()
+{
+var c=0;
+var q1=document.quiz.q1.value;
+var q2=document.quiz.q2.value;
+var q3=document.quiz.q3.value;
+var q4=document.quiz.q4.value;
+var q5=document.quiz.q5.value;
+if(q1=="h1"){c++;}
+if(q2=="br"){c++;}
+if(q3=="/"){c++;}
+if(q4=="t1"){c++;}
+if(q5=="ol"){c++;}
+alert("Your score = "+c);
+}
+</script>
+</body>
+</html>
